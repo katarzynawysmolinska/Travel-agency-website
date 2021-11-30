@@ -1,242 +1,234 @@
-
-
-html, body{
-    scroll-behavior: smooth;
+html,
+body {
+	scroll-behavior: smooth;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 
-nav{
-position: fixed;
-height: 100vh;
-width: 15%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-font-weight: bold;
-
+nav {
+	position: fixed;
+	height: 100vh;
+	width: 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	font-weight: bold;
 }
 
-div.logo img{
-line-height: 140px;
+div.logo img {
+	line-height: 140px;
 }
-
 
 nav > div:nth-child(1) {
-flex-grow: 1.5;
-padding-top: 15%;
-
+	flex-grow: 1.5;
+	padding-top: 15%;
 }
 
-
-nav > div:nth-child(2), nav > div:nth-child(3), nav > div:nth-child(4), nav > div:nth-child(5), nav > div:nth-child(6), nav > div:nth-child(7){
-flex-grow: 1;
+nav > div:nth-child(2),
+nav > div:nth-child(3),
+nav > div:nth-child(4),
+nav > div:nth-child(5),
+nav > div:nth-child(6),
+nav > div:nth-child(7) {
+	flex-grow: 1;
 }
 
-
-a{
-text-decoration: none;
-transition: 5s;
-cursor: pointer;
-color: black;
+a {
+	text-decoration: none;
+	transition: 5s;
+	cursor: pointer;
+	color: black;
 }
 
-
-main{
-height: 500vh;
-width: 85%;
-position: absolute;
-left: 15%;
-border-left: 1px solid rgb(199, 194, 194);
-box-sizing: border-box;
-font-size: 30px;
+main {
+	height: 500vh;
+	width: 85%;
+	position: absolute;
+	left: 15%;
+	border-left: 1px solid rgb(199, 194, 194);
+	box-sizing: border-box;
+	font-size: 30px;
 }
 
-
-section{
-height: 100vh;
+section {
+	height: 100vh;
 }
 
 section:nth-child(even) {
-background-color: black;
-color: white;
+	background-color: black;
+	color: white;
 }
 section:nth-child(odd) {
-background-color: white;
+	background-color: white;
 }
 
-section.start{
-position: relative;
-overflow: hidden;
+section.start {
+	position: relative;
+	overflow: hidden;
 }
 
 section.start > button {
-    display: block;
-    height: 50px;
-    width: 200px;
-    font-weight: bold;
-    
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    z-index:10 ;
-    /* line-height: 50px; */
-    font-size: 15px;
-    background-color: white;
-    border: 3px solid black;
-    box-shadow: 0 0 14px 0 black;
-    border-bottom-right-radius: 30px 24px;
-    border-bottom-left-radius: 30px 24px;
-    border-top-right-radius: 30px 24px;
-    border-top-left-radius: 30px 24px;
-    cursor: pointer;
-    transition: 0.5s;
+	display: block;
+	height: 50px;
+	width: 200px;
+	font-weight: bold;
+
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	z-index: 10;
+	/* line-height: 50px; */
+	font-size: 15px;
+	background-color: white;
+	border: 3px solid black;
+	box-shadow: 0 0 14px 0 black;
+	border-bottom-right-radius: 30px 24px;
+	border-bottom-left-radius: 30px 24px;
+	border-top-right-radius: 30px 24px;
+	border-top-left-radius: 30px 24px;
+	cursor: pointer;
+	transition: 0.5s;
 }
 section.start > button:hover {
- background-color: black;
- color: white;
+	background-color: black;
 }
 
+section.start > button:hover > a {
+	color: white;
+}
 
-img.start{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* top:50%;
+img.start {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* top:50%;
     left:50%; */
-    /* min-width: 100%;
+	/* min-width: 100%;
     min-height: 100%;
     transform: translate(-50%,-50%);  */
-    opacity: 0;
-    animation: slider 25s infinite linear;
+	opacity: 0;
+	animation: slider 25s infinite linear;
 }
 
 img:nth-child(2) {
-    animation-delay: 5s;
+	animation-delay: 5s;
 }
 img:nth-child(3) {
-    animation-delay: 10s;
+	animation-delay: 10s;
 }
 img:nth-child(4) {
-    animation-delay: 15s;
+	animation-delay: 15s;
 }
 img:nth-child(5) {
-    animation-delay:20s;
+	animation-delay: 20s;
 }
-
-
 
 div.slogan {
-    position: absolute;
-    top: 15%;
-    left: 0%;
-    width: 100%;
-    height: 17%;
-    color: white;
-    background-color: rgba(0,0,0,0.7);
-    /* text-align: center; */
-    font-size: 30px;
-    font-weight: bold;
+	position: absolute;
+	top: 15%;
+	left: 0%;
+	width: 100%;
+	height: 17%;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+	/* text-align: center; */
+	font-size: 30px;
+	font-weight: bold;
 }
 div.slogan > p {
-    position: absolute;
-    left: 27%;
+	position: absolute;
+	left: 27%;
 }
 
-
-
-h2.start{
-    position: absolute;
-    font-size: 25px;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 7px 30px;
-    opacity: 0;
+h2.start {
+	position: absolute;
+	font-size: 25px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 7px 30px;
+	opacity: 0;
 }
 
 h2.start:nth-of-type(1) {
-    top:55%;
-    right: 20%;
-    animation: txt 25s infinite linear;
+	top: 55%;
+	right: 20%;
+	animation: txt 25s infinite linear;
 }
 
 h2.start:nth-of-type(2) {
-    top:45%;
-    right: 50%;
-    animation: txt 25s infinite linear 5s;
+	top: 45%;
+	right: 50%;
+	animation: txt 25s infinite linear 5s;
 }
 
 h2.start:nth-of-type(3) {
-    top:60%;
-    right: 10%;
-    animation: txt 25s infinite linear 10s;
+	top: 60%;
+	right: 10%;
+	animation: txt 25s infinite linear 10s;
 }
 
 h2.start:nth-of-type(4) {
-    top:50%;
-    right: 50%;
-    animation: txt 25s infinite linear 15s;   
+	top: 50%;
+	right: 50%;
+	animation: txt 25s infinite linear 15s;
 }
 
 h2.start:nth-of-type(5) {
-    top:70%;
-    right: 42%;
-    animation: txt 25s infinite linear 20s;
+	top: 70%;
+	right: 42%;
+	animation: txt 25s infinite linear 20s;
 }
 
 @keyframes txt {
-    0% {
-        opacity:0;
-    }
-    /* 2% {
+	0% {
+		opacity: 0;
+	}
+	/* 2% {
         opacity: 0;
     } */
-    4% {
-        opacity:0;
-    }
-    6% {
-        opacity: 1;
-    }
-    16% {
-        opacity: 1;
-    }
-    18% {
-        opacity:0;
-    }
-    22% {
-        opacity:0;
-    }
-    100% {
-        opacity: 0;
-    }
+	4% {
+		opacity: 0;
+	}
+	6% {
+		opacity: 1;
+	}
+	16% {
+		opacity: 1;
+	}
+	18% {
+		opacity: 0;
+	}
+	22% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 @keyframes slider {
-    0% {
-        opacity:0;
-    }
-    2% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    22% {
-        opacity:0;
-    }
-    100% {
-        opacity: 0;
-    }
-
+	0% {
+		opacity: 0;
+	}
+	2% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+	}
+	22% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
 }
-
-
 
 /* img{
     max-width: 85vw;
