@@ -22,27 +22,44 @@ function delay() {
 
 setTimeout(delay, 1300);
 
-// wywołanie animacji w nav poprzez scroll
-
-function startAnimation() {
+function showCurrentSectionInNav() {
 	const scrollHeight = window.scrollY;
 	console.log(scrollHeight);
 
-	const section1Height = document.querySelector(
-		"section:nth-of-type(1)"
-	).clientHeight;
-	const section2Height = document.querySelector(
-		"section:nth-of-type(2)"
-	).clientHeight;
-	const section3Height = document.querySelector(
-		"section:nth-of-type(3)"
-	).clientHeight;
-	const section4Height = document.querySelector(
-		"section:nth-of-type(4)"
-	).clientHeight;
-	const section5Height = document.querySelector(
-		"section:nth-of-type(5)"
-	).clientHeight;
+	const section1Height = document.querySelector("#start").clientHeight;
+	const section2Height = document.querySelector("#offer").clientHeight;
+	const section3Height = document.querySelector("#portfolio").clientHeight;
+	const section4Height = document.querySelector("#about-us").clientHeight;
+
+	const section1DistanceFromBeginningOfBrowser =
+		document.querySelector("#start").offsetTop;
+	const section2DistanceFromBeginningOfBrowser =
+		document.querySelector("#offer").offsetTop;
+	const section3DistanceFromBeginningOfBrowser =
+		document.querySelector("#portfolio").offsetTop;
+	const section4DistanceFromBeginningOfBrowser =
+		document.querySelector("#about-us").offsetTop;
+
+	if (scrollHeight < section1Height) {
+		console.log("Sekcja1");
+	} else if (
+		scrollHeight <
+		section2Height + section2DistanceFromBeginningOfBrowser
+	) {
+		console.log("Sekcja2");
+	} else if (
+		scrollHeight <
+		section3Height + section3DistanceFromBeginningOfBrowser
+	) {
+		console.log("Sekcja3");
+	} else if (
+		scrollHeight <
+		section4Height + section4DistanceFromBeginningOfBrowser
+	) {
+		console.log("Sekcja4");
+	} else {
+		console.log("Sekcja5");
+	}
 }
 
-document.addEventListener("scroll", startAnimation);
+document.addEventListener("scroll", showCurrentSectionInNav);
